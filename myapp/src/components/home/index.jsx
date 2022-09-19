@@ -42,20 +42,20 @@ const Home = () => {
 
 
             {
-                data.map((eachItem ,index) => {
-                    return(
-                       <Weathercard 
-                       key={index}
-                       date = {eachItem.dt_txt}
-                       temp ={eachItem.main.temp}
-                       min ={eachItem.main.temp_min}
-                       max ={eachItem.main.temp_max}
-                       
-                       /> )
+                data.map((eachItem, index) => {
+                    return (
+                        <Weathercard
+                            key={index}
+                            date={eachItem.dt_txt}
+                            temp={eachItem.main.temp}
+                            min={eachItem.main.temp_min}
+                            max={eachItem.main.temp_max}
+
+                        />)
                 })
 
 
-            
+
             }
 
         </div>
