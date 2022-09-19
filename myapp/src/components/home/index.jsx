@@ -1,5 +1,6 @@
 import axios from 'axios'
 import Weathercard from '../weathercard';
+import './index.css'
 
 import { useState } from "react";
 
@@ -29,10 +30,10 @@ const Home = () => {
     }
 
     return (
-        <div>
+        <div className='weather'>
             <h1>Weather App Home</h1>
             <form onSubmit={submitHandler}>
-                <label htmlFor="cityName">city name : </label>
+               
                 <input type="text" onChange={(e) => {
                     console.log(e.target.value);
                     setcityName(e.target.value)

@@ -1,12 +1,15 @@
 import './index.css'
+import moment from 'moment';
 
 const Weathercard = ({  date, temp, min, max }) => {
     return (
-        <div>
+        <div className='main'>
             <div className="card">
-                <p>{date}</p>
-                <h1>{temp}</h1>
-                <p>{min} - {max}</p>
+                {/* <p>{moment(date).format('MMMM Do YYYY, h:mm a')}</p> */}
+                <p>{moment(date).format('ll')}</p>
+                <p>{moment(date).format(' h:mm a')}</p>
+                <h1>{`${parseInt(temp)}°C`}</h1>
+                <p>{`${min}°C`} - {`${max}°C`}</p>
 
             </div>
         </div>
